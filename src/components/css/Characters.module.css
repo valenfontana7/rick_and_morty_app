@@ -1,0 +1,62 @@
+.characters {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.cardlight {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0.3px 0.3px 2px 1px rgb(94, 93, 93);
+  border-radius: 10px;
+  margin-bottom: 2%;
+  padding: 5px 5px 40px 5px;
+  transition: height 5s;
+  cursor: pointer;
+}
+.carddark {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0.3px 0.3px 2px 1px rgb(94, 93, 93);
+  border-radius: 10px;
+  margin-bottom: 2%;
+  padding: 5px 5px 40px 5px;
+  transition: height 5s;
+  cursor: pointer;
+}
+.cardlight:hover {
+  box-shadow: 0.3px 0.3px 1px 2px black;
+}
+.carddark:hover {
+  box-shadow: 0.3px 0.3px 1px 2px white;
+}
+.carddark img {
+  width: 200px;
+  border-radius: 10px;
+}
+.cardlight img {
+  width: 200px;
+  border-radius: 10px;
+}
+.card_info {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 14px;
+  width: 80%;
+}
+.card_title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1px;
+}
+.card_info div {
+  margin-bottom: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}

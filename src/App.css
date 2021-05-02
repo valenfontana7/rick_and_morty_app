@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.darkMode {
+  background-color: rgb(37, 37, 55);
+  color: white;
+}
+.lightMode {
+  background-color: white;
+  color: black;
+}
