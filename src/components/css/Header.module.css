@@ -11,6 +11,7 @@
   justify-content: space-between;
 }
 .btnmodedark {
+  padding: 10px;
   margin-top: 1%;
   margin-right: 1%;
   background: transparent;
@@ -22,6 +23,7 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .btnmodelight {
+  padding: 10px;
   margin-top: 1%;
   margin-right: 1%;
   background: transparent;

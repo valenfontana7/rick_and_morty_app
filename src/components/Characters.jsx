@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
 import c from "./css/Characters.module.css";
 
-function Characters({ darkMode }) {
-  const API = "https://rickandmortyapi.com/api/character/";
-  const [characters, setCharacters] = useState([]);
-  useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => setCharacters(data.results));
-  }, []);
-
+function Characters({ darkMode, characters }) {
   return (
     <div className={c.characters}>
       {characters.map((character, i) => (
