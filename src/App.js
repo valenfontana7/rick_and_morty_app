@@ -1,22 +1,20 @@
 import "./App.css";
 import Header from "./components/Header";
 import Characters from "./components/Characters";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Pagination from "@material-ui/lab/Pagination";
 import { makeStyles } from "@material-ui/core";
+import ThemeContext from "./context/ThemeContext";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const handleClick = () => {
-    setDarkMode(!darkMode);
-  };
+  const { theme } = useContext(ThemeContext);
   const API = "https://rickandmortyapi.com/api/character/";
   const [characters, setCharacters] = useState([]);
   const [pages, setPages] = useState("");
   const useStyles = makeStyles(() => ({
     ul: {
       "& .MuiPaginationItem-root": {
-        color: darkMode ? "white" : "black",
+        color: theme ? "white" : "black",
       },
     },
   }));
@@ -40,9 +38,21 @@ function App() {
       });
   };
   return (
-    <div className={darkMode ? "darkMode" : "lightMode"}>
-      <Header onHandleClick={handleClick} darkMode={darkMode} />
-      <Characters darkMode={darkMode} characters={characters} />
+    <div className={theme ? "darkMode" : "lightMode"}>
+      <Header />
+      <Pagination
+        classes={{ ul: classes.ul }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+        count={Number(pages)}
+        variant="outlined"
+        onChange={handleChange}
+      />
+      <br />
+      <br />
+      <Characters characters={characters} />
       <div
         style={{
           width: "100%",

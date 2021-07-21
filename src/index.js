@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import ThemeContext from "./context/ThemeContext";
+import { ThemeContextProvider } from "./context/ThemeContext";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value="16%">
+    <ThemeContextProvider>
       <App />
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
